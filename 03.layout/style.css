@@ -1,0 +1,839 @@
+:root {
+  --primary: #1d1d1f;
+  --secondary: #86868b;
+  --highlight: #0071e3;
+  --bg-color: #f5f5f7;
+}
+
+*,
+body {
+  box-sizing: border-box;
+  font-family:
+    "Inter",
+    "Noto Sans TC",
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+  color: var(--secondary);
+  transition: all 0.15s ease-in-out;
+}
+
+section {
+  padding: 7rem 0;
+}
+
+a:hover {
+  color: var(--primary);
+}
+
+.wrapper {
+  max-width: 1140px;
+  margin: auto;
+  padding: 0 1.5rem;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* HEADER NAVIGATION */
+header {
+  position: sticky;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 100%;
+  height: 3rem;
+  line-height: 3rem;
+}
+
+header .wrapper {
+  max-width: 1024px;
+}
+
+.h-left {
+  float: left;
+  font-size: 14px;
+  line-height: 3rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+.h-left a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.h-left a i {
+  margin-right: 0.375rem;
+  color: var(--primary);
+}
+
+.h-left a:hover,
+.h-left a:hover i {
+  color: var(--highlight);
+}
+
+nav {
+  float: left;
+  margin-left: 2.4rem;
+}
+
+nav ul li {
+  float: left;
+}
+
+nav ul li a {
+  display: inline-block;
+  margin-right: 1.5rem;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+}
+
+.h-right {
+  float: right;
+}
+
+.h-right button {
+  border: 0;
+  display: inline-block;
+  background-color: transparent;
+  width: 2rem;
+  line-height: 3rem;
+}
+
+.h-right button:hover i {
+  cursor: pointer;
+  color: var(--primary);
+}
+
+/* SUB-NAVIGATION */
+section#sub-nav {
+  position: sticky;
+  top: 3rem;
+  width: 100%;
+  height: 82.5px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 0;
+  overflow: auto;
+}
+
+#sub-nav .wrapper {
+  max-width: 960px;
+  padding: 0.75rem 1rem;
+}
+
+#sub-nav .wrapper div {
+  display: block;
+  float: left;
+  box-sizing: border-box;
+  width: 20%;
+  text-align: center;
+  overflow: hidden;
+}
+
+#sub-nav .wrapper div a {
+  text-decoration: none;
+}
+
+#sub-nav .wrapper div a span {
+  display: block;
+}
+
+#sub-nav .wrapper div a span:first-child i {
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 0.25rem;
+  transform: translateY(1px);
+}
+
+#sub-nav .wrapper div a:hover span:first-child i {
+  color: var(--primary);
+  transform: translateY(-1px);
+}
+
+#sub-nav .wrapper div a span:nth-child(2) {
+  font-size: 11px;
+}
+
+#sub-nav .wrapper div a:hover span:nth-child(2) {
+  color: var(--primary);
+}
+
+/* 通知公告 */
+#notification {
+  padding: 0.75rem 0;
+  background-color: var(--bg-color);
+}
+
+#notification .wrapper {
+  max-width: 1024px;
+  text-align: center;
+  font-size: 12px;
+}
+
+#notification .wrapper a {
+  color: var(--highlight);
+  text-decoration: none;
+}
+
+#notification .wrapper a:hover {
+  text-decoration: underline;
+}
+
+section#hero {
+  padding-top: 5rem;
+}
+
+#hero .wrapper {
+  max-width: 1180px;
+  text-align: center;
+}
+
+#hero .eyebrow {
+  margin-bottom: 0.75rem;
+  text-align: center;
+  font-size: 13px;
+  line-height: 1.5;
+  font-weight: 600;
+  color: #bf4800;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+#hero h1 {
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 76px;
+  line-height: 1.08;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: -0.025em;
+}
+
+#hero h1 + p {
+  font-size: 28px;
+  margin-bottom: 1.25rem;
+  line-height: 1.5rem;
+}
+
+#hero p {
+  font-size: 17px;
+  line-height: 1.625;
+  margin-bottom: 2rem;
+}
+
+/* CTA */
+#cta {
+  margin-bottom: 3.5rem;
+}
+
+#cta a {
+  display: inline-block;
+}
+
+#cta a + a {
+  margin-left: 2rem;
+}
+
+#cta a.cta-order {
+  background-color: var(--highlight);
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0.625rem 1.5rem;
+  border-radius: 9999px;
+  text-decoration: none;
+}
+
+#cta a.cta-more {
+  font-size: 15px;
+  color: var(--highlight);
+  text-decoration: none;
+}
+
+#cta a.cta-more:hover {
+  text-decoration: underline;
+}
+
+#cta a.cta-more span {
+  font-size: 13px;
+  padding-left: 0.125rem;
+  color: var(--highlight);
+  text-decoration: none;
+}
+
+/* HERO 視覺圖 */
+#hero-img {
+  margin-bottom: 5rem;
+}
+
+#hero-img img {
+  width: 100%;
+  max-height: 640px;
+}
+
+/* 三項主要特點 */
+#three-highlights {
+  padding-top: 1.5rem;
+}
+
+#three-highlights .wrapper {
+  clear: both;
+  max-width: 1040px;
+}
+
+#three-highlights .wrapper div {
+  float: left;
+  width: 30%;
+  text-align: left;
+}
+
+#three-highlights .wrapper div + div {
+  margin-left: 5%;
+  margin-bottom: 1.5rem;
+}
+
+#three-highlights .wrapper div i {
+  font-size: 26px;
+  margin-bottom: 0.75rem;
+  color: var(--highlight);
+}
+
+#three-highlights .wrapper div h3 {
+  font-size: 19px;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+}
+
+#three-highlights .wrapper div p {
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.625;
+}
+
+/* 2. 兩欄 */
+#pro-audio {
+  background-color: var(--bg-color);
+}
+
+#pro-audio .left,
+#pro-audio .right {
+  float: left;
+  width: 48%;
+}
+
+/* 左欄 */
+#pro-audio .left img {
+  width: 100%;
+  height: 540px;
+  object-fit: cover;
+}
+
+/* 右欄 */
+#pro-audio .right {
+  margin-left: 4%;
+  padding-top: 0.5rem;
+}
+
+#pro-audio .right > span {
+  display: block;
+  margin-bottom: 0.75rem;
+  font-size: 12px;
+  color: var(--highlight);
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+
+#pro-audio .right h2 {
+  margin-bottom: 1.25rem;
+  font-size: 44px;
+  line-height: 1.12;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+#pro-audio .right p {
+  margin-bottom: 2.5rem;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.625;
+}
+
+#pro-audio .right .feature {
+  margin-bottom: 2.5rem;
+}
+
+#pro-audio .right .feature > div {
+  margin-top: 1.5rem;
+  padding-bottom: 1.25rem;
+  overflow: hidden;
+}
+
+#pro-audio .right .feature .symbol,
+#pro-audio .right .feature .spec {
+  display: inline-block;
+  float: left;
+}
+
+#pro-audio .right .feature .symbol i {
+  font-size: 20px;
+  width: 2rem;
+  padding-top: 0.125rem;
+  color: var(--highlight);
+}
+
+#pro-audio .right .feature .spec {
+  width: calc(100% - 32px);
+  padding-left: 0.5rem;
+}
+
+#pro-audio .right .feature .spec h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: var(--primary);
+}
+
+#pro-audio .right .feature .spec p {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.625rem;
+  margin-bottom: 0;
+}
+
+/* Action Links */
+.cta-links a {
+  display: inline-block;
+  float: left;
+  padding: 0.625rem 1.5rem;
+  font-size: 14px;
+}
+
+.cta-links .cta-order {
+  margin-right: 1.25rem;
+  background-color: var(--primary);
+  color: white;
+  border-radius: 9999px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.cta-links .cta-more {
+  color: var(--highlight);
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.cta-links .cta-more span {
+  display: inline-block;
+}
+
+/* 3. 三欄 */
+#three-column .header-section {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+#three-column .header-section > span {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--highlight);
+  margin-bottom: 0.75rem;
+}
+
+#three-column .header-section h2 {
+  font-size: 50px;
+  line-height: 1.25;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: -0.025em;
+  margin-bottom: 1rem;
+}
+
+#three-column .header-section p {
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.625;
+}
+
+/* Product Showcase */
+#three-column .products {
+}
+
+#three-column .products > div {
+  float: left;
+  width: 31%;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+#three-column .products > div + div {
+  margin-left: 3.5%;
+}
+
+#three-column .products .prod > div {
+  height: 250px;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+}
+
+#three-column .products .prod img {
+  width: 100%;
+  object-fit: cover;
+}
+
+#three-column .products .prod img:hover {
+  scale: 1.02;
+}
+
+#three-column .products .prod span {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-size: 11px;
+  font-weight: 600;
+  color: #bf4800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+#three-column .products .prod h3 {
+  font-size: 24px;
+  line-height: 1.5;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+#three-column .products .prod p {
+  max-width: 20rem;
+  min-height: 42px;
+  margin: 0 auto 0.75rem;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.625;
+}
+
+#three-column .products .prod .price {
+  height: auto;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+#three-column .products .prod .cta-links {
+  display: inline-block;
+  margin-bottom: 0;
+  height: auto;
+}
+
+#three-column .products .prod .cta-links > div {
+  display: inline-block;
+  float: left;
+}
+
+#three-column .products .prod .cta-links > div + div {
+  margin-left: 0.75rem;
+}
+
+#three-column .products .prod .cta-links > div a {
+  padding: 0.375rem 1rem;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+#three-column .products .prod .cta-links > div:first-child a {
+  background-color: var(--highlight);
+  color: white;
+  border-radius: 9999px;
+}
+
+#three-column .products .prod .cta-links > div:first-child a:hover {
+  background-color: #0077ed;
+}
+
+#three-column .products .prod .cta-links > div:last-child a {
+  color: var(--highlight);
+}
+
+#three-column .products .prod .cta-links > div:last-child a:hover {
+  text-decoration: underline;
+}
+
+/* 4. 規格比較 */
+#specs {
+  background-color: var(--bg-color);
+}
+
+#specs .wrapper {
+  max-width: 1040px;
+}
+
+#specs .heading {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+#specs .heading h2 {
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: -0.025em;
+  margin-bottom: 0.75rem;
+}
+
+#specs .heading p {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+#specs .spec-table > div > div {
+  float: left;
+  width: 25%;
+}
+
+#specs .spec-table > div {
+  padding: 1.25rem 0;
+}
+
+#specs .spec-table > div.header > div {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+#specs .spec-table > div.header > div:first-child {
+  font-size: 13px;
+  color: var(--secondary);
+}
+
+#specs .spec-table > div.row > div {
+  font-size: 14px;
+  color: var(--primary);
+}
+
+#specs .spec-table > div.row > div:first-child {
+  color: var(--secondary);
+}
+
+/* 5. 舊換新 / 升級 */
+#trade-in .wrapper {
+  max-width: 840px;
+  text-align: center;
+}
+
+#trade-in > div > div {
+  margin-bottom: 0.75rem;
+}
+
+#trade-in i {
+  font-size: 32px;
+  font-weight: 900;
+  color: var(--highlight);
+}
+
+#trade-in h2 {
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.025em;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+#trade-in p {
+  margin: 0 auto;
+  font-size: 17px;
+  line-height: 1.625;
+  font-weight: 300;
+  max-width: 36em;
+  margin-bottom: 2rem;
+}
+
+#trade-in .cta-links {
+  display: inline-block;
+}
+
+/* 6. 立即訂閱 */
+#subscription {
+  background-color: var(--bg-color);
+  padding: 6rem 0;
+  text-align: center;
+}
+
+#subscription .wrapper {
+  max-width: 680px;
+}
+#subscription .wrapper > div {
+  margin-bottom: 0.75rem;
+}
+
+#subscription i {
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--highlight);
+}
+
+#subscription h2 {
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 1.5;
+  color: var(--primary);
+  letter-spacing: -0.025em;
+  margin-bottom: 0.75rem;
+}
+
+#subscription p {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 1.625;
+  margin-bottom: 2rem;
+}
+
+#subscription .cta-form {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+#subscription .cta-form label {
+  position: absolute;
+  top: -1em;
+}
+
+#subscription .cta-form input {
+  float: left;
+  width: 72%;
+  height: 2.75rem;
+  font-size: 14px;
+  padding: 0 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 9999px;
+}
+
+#subscription .cta-form input:active,
+#subscription .cta-form input:focus,
+#subscription .cta-form input:focus-visible {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  border-width: 2px;
+  border-color: var(--highlight);
+}
+
+#subscription .cta-form button {
+  float: right;
+  width: 25%;
+  height: 2.75rem;
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  border: 0;
+  border-radius: 9999px;
+  background-color: var(--highlight);
+  cursor: pointer;
+}
+
+#subscription .notice {
+  font-size: 12px;
+  margin-bottom: 0;
+}
+
+#subscription .notice i {
+  font-size: 11px;
+  font-weight: 900;
+  margin-right: 0.25rem;
+}
+
+/* FOOTER */
+footer {
+  background-color: var(--bg-color);
+  padding: 2.5rem 0 4rem;
+}
+
+footer .wrapper {
+  max-width: 1024px;
+}
+
+/* 免責聲明 */
+#disclaimers {
+  font-weight: 300;
+  font-size: 11px;
+  line-height: 1.625;
+  letter-spacing: -0.01em;
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+#disclaimers p + p {
+  margin-top: 0.5rem;
+}
+
+/* Sitemap Navigation */
+#sitemap-nav {
+  padding-bottom: 2rem;
+}
+
+#sitemap-nav > div {
+  width: 20%;
+  float: left;
+  font-size: 12px;
+  padding-right: 1rem;
+  padding-bottom: 1.5rem;
+}
+
+#sitemap-nav h3 {
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+#sitemap-nav li + li {
+  margin-top: 0.375rem;
+}
+
+#sitemap-nav a {
+  text-decoration: none;
+}
+#sitemap-nav a:hover {
+  text-decoration: underline;
+}
+
+/* 著作權與法律 */
+#copyright {
+  font-size: 11px;
+}
+
+#copyright .lang {
+  float: right;
+}
+
+#copyright .lang a {
+  text-decoration: none;
+}
+
+#copyright .legal {
+  float: left;
+}
+
+#copyright .legal span {
+  margin-right: 1rem;
+}
+
+#copyright .legal a {
+  margin-right: 0.75rem;
+  text-decoration: none;
+}
+
+#copyright .legal a:hover {
+  text-decoration: underline;
+}
